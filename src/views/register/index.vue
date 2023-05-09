@@ -39,8 +39,9 @@ export default {
   methods: {
     async onSubmit (value) {
       console.log('注册', value)
-      const res = await userRegister(value)
-      console.log('res', res)
+      await userRegister(value)
+      this.$toast.success('注册成功!')
+      this.$router.push('/login')
     }
   }
 }
