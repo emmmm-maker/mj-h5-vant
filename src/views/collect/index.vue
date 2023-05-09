@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <div>收藏</div>
 </template>
 
 <script>
@@ -9,6 +7,7 @@ export default {
 
 }
 </script>
-<style lang="less">
+
+<style>
 
 </style>
