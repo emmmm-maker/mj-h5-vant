@@ -1,6 +1,7 @@
 import axios from 'axios'
+const baseURL = process.env.VUE_APP_BASE_URL
 const instance = axios.create({
-  baseURL: 'http://interview-api-t.itheima.net/h5/',
+  baseURL,
   timeout: 5000
 })
 // 添加请求拦截器
