@@ -14,11 +14,6 @@ instance.interceptors.request.use(function (config) {
     forbidClick: true,
     duration: 0
   })
-  // that.$toast.loading({
-  //   message: '加载中...',
-  //   forbidClick: true,
-  //   duration: 0
-  // })
 
   // 在发送请求之前做些什么
   return config
