@@ -12,3 +12,16 @@ export const userRegister = (data) => {
     data
   })
 }
+
+/**
+ * 用户登录
+ * @param {*} data
+ * @returns
+ */
+export const userLogin = (data) => {
+  return request({
+    method: 'POST',
+    url: 'user/login',
+    data
+  })
+}

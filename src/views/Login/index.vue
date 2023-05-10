@@ -36,8 +36,10 @@ export default {
     }
   },
   methods: {
-    onSubmit (values) {
-      console.log('dasdsa', values)
+    async onSubmit (values) {
+      await this.$store.dispatch('user/login', values)
+      this.$toast.success('登录成功')
+      this.$router.push('/article')
     }
   }
 }

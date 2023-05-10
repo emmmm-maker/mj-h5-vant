@@ -1,7 +1,5 @@
 import axios from 'axios'
-import Vue from 'vue'
-console.log('Vue.prototype', Vue.prototype)
-const Toast = Vue.prototype.$toast
+import { Toast } from 'vant'
 const baseURL = process.env.VUE_APP_BASE_URL
 const instance = axios.create({
   baseURL,
@@ -26,12 +24,10 @@ instance.interceptors.request.use(function (config) {
 instance.interceptors.response.use(function (response) {
   // 对响应数据做点什么
   Toast.clear()
-  console.log('response', response)
   return response.data
 }, function (error) {
   Toast.clear()
-  console.log('error', error)
-  Toast.fail(error.response.data.message)
+  Toast(error.response.data.message)
   // 对响应错误做点什么
   return Promise.reject(error)
 })
